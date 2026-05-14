@@ -1,0 +1,375 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0b0b;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.nav {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wordmark {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-decoration: none;
+  color: #f5f5f5;
+  line-height: 0.8;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.wordmark:hover {
+  opacity: 0.85;
+}
+
+.wordmark span {
+  color: #d21f2b;
+  margin-left: 0.04em;
+}
+
+.nav nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav nav a {
+  color: #7f7f7f;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav nav a:hover {
+  color: #ffffff;
+}
+
+main {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #222;
+}
+
+.hero-logo {
+  width: 640px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.hero-text {
+  max-width: 760px;
+  font-size: clamp(1.5rem, 3vw, 3.2rem);
+  line-height: 1.25;
+  color: #f2f2f2;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subtext {
+  max-width: 720px;
+  color: #9f9f9f;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.secondary-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.secondary-link:hover {
+  color: #ffffff;
+}
+
+.section {
+  padding: 6rem 0;
+  border-bottom: 1px solid #222;
+}
+
+.eyebrow {
+  color: #8c8c8c;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.82rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  max-width: 900px;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  letter-spacing: -0.055em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.section p {
+  max-width: 760px;
+  color: #b8b8b8;
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.grid div,
+.research-card,
+.link-grid a,
+.founder-card {
+  border: 1px solid #2a2a2a;
+  background: #121212;
+  padding: 2rem;
+  border-radius: 18px;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.grid div:hover,
+.research-card:hover,
+.link-grid a:hover,
+.founder-card:hover {
+  border-color: #3a3a3a;
+  background: #151515;
+  transform: translateY(-3px);
+}
+
+.grid h3,
+.research-card h3,
+.founder-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.grid p,
+.research-card p,
+.founder-card p {
+  color: #a8a8a8;
+  font-size: 1rem;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.link-grid a {
+  display: block;
+  text-decoration: none;
+}
+
+.link-grid span {
+  display: block;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.link-grid small {
+  color: #9d9d9d;
+  line-height: 1.8;
+}
+
+.research-card,
+.founder-card {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.label {
+  color: #777777 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem !important;
+  margin-bottom: 0.7rem;
+}
+
+.founder-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.founder-meta span {
+  border: 1px solid #2a2a2a;
+  background: #0f0f0f;
+  color: #d0d0d0;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.statement h2 {
+  max-width: 850px;
+}
+
+.contact .button {
+  margin-top: 2rem;
+}
+
+footer {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+  padding: 3rem 0;
+  color: #8f8f8f;
+  font-size: 0.95rem;
+}
+
+footer p:first-child {
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: #8f8f8f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.legal-page {
+  min-height: 80vh;
+  padding: 6rem 0;
+}
+
+.legal-page h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  margin-bottom: 2rem;
+}
+
+.legal-page h2 {
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  margin-top: 2rem;
+  margin-bottom: 0.7rem;
+}
+
+.legal-page p {
+  max-width: 760px;
+  color: #b8b8b8;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav nav {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  main,
+  .nav,
+  footer {
+    width: min(100%, 88%);
+  }
+
+  .wordmark {
+    font-size: 1.3rem;
+    letter-spacing: 0.24em;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-logo {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+  }
+
+  .grid,
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+}
