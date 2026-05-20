@@ -456,3 +456,35 @@ footer p:first-child {
 .card-link {
   text-decoration: none;
 }
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.approach-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+
+  padding: 1.75rem;
+
+  background: rgba(255,255,255,0.015);
+
+  transition: border-color 0.25s ease,
+              transform 0.25s ease;
+}
+
+.approach-card:hover {
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-3px);
+}
+
+.approach-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.approach-card p {
+  margin: 0;
+}
