@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  scroll-snap-type: y proximity;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,6 +30,12 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(11, 11, 11, 0.92);
+  backdrop-filter: blur(14px);
 }
 
 .wordmark {
@@ -142,8 +152,9 @@ main {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 7rem 0;
   border-bottom: 1px solid #222;
+  scroll-margin-top: 6rem;
 }
 
 .eyebrow {
@@ -279,33 +290,76 @@ h2 {
   margin-top: 2rem;
 }
 
-footer {
+.contact {
+  padding-bottom: 4rem;
+}
+
+.site-footer {
   width: min(1100px, 90%);
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 0 2rem;
   color: #8f8f8f;
-  font-size: 0.95rem;
 }
 
-footer p:first-child {
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 2rem;
+
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.footer-brand p:last-child {
+  margin-top: 0.8rem;
+  color: #9a9a9a;
+}
+
+.footer-wordmark {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.28em;
+  color: #f5f5f5;
+}
+
+.footer-wordmark span {
+  color: #d21f2b;
+}
+
+.footer-heading {
   color: #ffffff;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 0.92rem;
+  font-weight: 700;
 }
 
-.footer-links {
+.footer-column {
   display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.footer-links a {
+.footer-column a {
   color: #8f8f8f;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
-.footer-links a:hover {
+.footer-column a:hover {
   color: #ffffff;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  font-size: 0.92rem;
+  color: #777777;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 
 .legal-page {
@@ -332,15 +386,17 @@ footer p:first-child {
 }
 
 @media (max-width: 768px) {
-  .nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .nav nav {
-    gap: 1rem;
-    flex-wrap: wrap;
+  @media (max-width: 560px) {
+    .nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+  
+    .nav nav {
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
   }
 
   main,
@@ -370,7 +426,9 @@ footer p:first-child {
   }
 
   .grid,
-  .link-grid {
+  .link-grid,
+  .approach-grid,
+  .insights-grid {
     grid-template-columns: 1fr;
   }
 
@@ -453,12 +511,9 @@ footer p:first-child {
   text-decoration: none;
 }
 
-.card-link {
-  text-decoration: none;
-}
 .approach-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -487,4 +542,133 @@ footer p:first-child {
 
 .approach-card p {
   margin: 0;
+}
+
+.legal-page {
+  min-height: 80vh;
+}
+
+.hero,
+.section {
+  scroll-snap-align: start;
+}
+
+.section-link {
+  margin-top: 2rem;
+}
+
+.section-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  color: #b8b8b8;
+  text-decoration: none;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.section-link a:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+  .link-grid,
+  .approach-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 7vw, 4rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: static;
+  }
+
+  .hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .button,
+  .secondary-link {
+    width: fit-content;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    line-height: 1.05;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .grid,
+  .link-grid,
+  .approach-grid,
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-page h1 {
+    font-size: 2.8rem;
+    line-height: 1.05;
+  }
+}
+
+@media (max-width: 480px) {
+  main,
+  .nav,
+  footer {
+    width: min(100%, 90%);
+  }
+
+  .wordmark {
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+  }
+
+  .nav nav {
+    gap: 0.8rem;
+  }
+
+  .nav nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .grid div,
+  .research-card,
+  .link-grid a,
+  .founder-card,
+  .approach-card,
+  .insight-card {
+    padding: 1.4rem;
+  }
 }
