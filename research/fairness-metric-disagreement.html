@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>When Fairness Metrics Disagree | Ducaltus</title>
+  <meta name="description" content="Ducaltus research brief on the Fairness Disagreement Index and reliability of demographic fairness assessment." />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/png" href="../assets/ducaltus_favicon.png" />
+</head>
+
+<body>
+  <header class="nav">
+    <a class="brand wordmark" href="/">
+      DUCALTUS<span>.</span>
+    </a>
+
+    <nav>
+      <a href="/#capabilities">Capabilities</a>
+      <a href="/#approach">Approach</a>
+      <a href="/#research">Research</a>
+      <a href="/#insights">Insights</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="legal-page research-brief">
+    <p class="eyebrow">Research Brief</p>
+
+    <h1>When Fairness Metrics Disagree</h1>
+
+    <p>
+      This research investigates how different fairness metrics can produce conflicting conclusions when evaluating the same machine learning system.
+      The work introduces the Fairness Disagreement Index (FDI), a measure designed to quantify inconsistency across fairness metrics.
+    </p>
+
+    <h2>Why This Matters</h2>
+
+    <p>
+      In high-stakes AI systems, fairness evaluation cannot rely on a single metric. False positive rate disparity, false negative rate disparity,
+      accuracy disparity, and worst-group performance may each tell a different story about the same model.
+    </p>
+
+    <p>
+      This creates deployment uncertainty: a system may appear acceptable under one fairness measure while showing substantial risk under another.
+    </p>
+
+    <h2>Key Findings</h2>
+
+    <ul>
+      <li>Fairness conclusions can change depending on the metric used.</li>
+      <li>Metric disagreement persists across decision thresholds.</li>
+      <li>Single-metric fairness reporting is insufficient for reliable deployment assessment.</li>
+      <li>FDI provides a structured way to quantify fairness disagreement.</li>
+    </ul>
+    <div class="research-visual">
+        <img
+          src="../assets/fdi-comparison-models.png"
+          alt="FDI comparison across models"
+        />
+      
+        <p class="visual-caption">
+          Comparison of Fairness Disagreement Index (FDI) behaviour across FaceNet and ArcFace models under varying decision thresholds.
+        </p>
+      </div>
+      
+      <p>
+        The results demonstrate that fairness disagreement persists across different model architectures and threshold settings,
+        reinforcing the need for multi-metric fairness evaluation in deployment-sensitive environments.
+      </p>
+      
+      <div class="research-visual secondary-visual">
+        <img
+          src="../assets/fdi-threshold-analysis.png"
+          alt="FDI across thresholds"
+        />
+      
+        <p class="visual-caption">
+          FDI variation across decision thresholds, illustrating how fairness disagreement changes under different operating conditions.
+        </p>
+      </div>
+
+      <div class="research-note">
+        Fairness assessment can vary significantly depending on the metric,
+        threshold, or evaluation perspective used, highlighting the need for
+        structured multi-metric assurance rather than isolated fairness reporting.
+      </div>
+
+    <h2>Deployment Relevance</h2>
+
+    <p>
+      For AI assurance, fairness disagreement is not just a reporting issue. It can create uncertainty around whether a system is suitable for real-world deployment,
+      especially in sensitive domains such as biometric recognition, healthcare, law enforcement, and automated risk assessment.
+    </p>
+
+    <div class="research-actions">
+        <a class="button" href="https://arxiv.org/abs/2604.15038" target="_blank" rel="noopener noreferrer">
+          View paper on arXiv
+        </a>
+      
+        <a class="secondary-link" href="https://github.com/khalidAALS/fairness_metric_disagreement" target="_blank" rel="noopener noreferrer">
+          View code on GitHub
+        </a>
+      </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <p class="footer-wordmark">DUCALTUS<span>.</span></p>
+        <p>AI Assurance & Governance</p>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Navigation</p>
+        <a href="/#capabilities">Capabilities</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#research">Research</a>
+        <a href="/#insights">Insights</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Contact</p>
+        <a href="mailto:hello@ducaltus.com">hello@ducaltus.com</a>
+        <a href="https://www.linkedin.com/company/ducaltus/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Legal</p>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Ducaltus. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

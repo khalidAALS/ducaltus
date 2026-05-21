@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Fairness in Law Enforcement Facial Recognition | Ducaltus</title>
+
+  <meta
+    name="description"
+    content="Ducaltus research brief on fairness, subgroup reliability, and deployment risk in law enforcement facial recognition systems."
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/png" href="../assets/ducaltus_favicon.png" />
+</head>
+
+<body>
+
+  <header class="nav">
+    <a class="brand wordmark" href="/">
+      DUCALTUS<span>.</span>
+    </a>
+
+    <nav>
+      <a href="/#capabilities">Capabilities</a>
+      <a href="/#approach">Approach</a>
+      <a href="/#research">Research</a>
+      <a href="/#insights">Insights</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="legal-page research-brief">
+
+    <p class="eyebrow">Research Brief</p>
+
+    <h1>Fairness in Law Enforcement Facial Recognition</h1>
+
+    <p>
+      This research examines fairness, subgroup performance, and deployment risk
+      in facial recognition systems used in law enforcement and high-impact
+      biometric decision environments.
+    </p>
+
+    <h2>Why This Matters</h2>
+
+    <p>
+      Facial recognition systems can achieve strong aggregate performance while
+      still producing uneven error rates across demographic or operational groups.
+      In law enforcement contexts, these failures can carry serious consequences.
+    </p>
+
+    <p>
+      Evaluation must therefore move beyond overall accuracy and examine false
+      positive rates, false negative rates, subgroup reliability, and deployment
+      suitability.
+    </p>
+
+    <h2>Key Findings</h2>
+
+    <ul>
+      <li>Aggregate accuracy can conceal subgroup-level performance failures.</li>
+      <li>False positive and false negative disparities carry different deployment risks.</li>
+      <li>Threshold choices can affect fairness and operational reliability.</li>
+      <li>Post-deployment auditing is essential for high-impact facial recognition systems.</li>
+    </ul>
+
+    <section class="research-visual">
+        <h2>Subgroup Error Disparities</h2>
+      
+        <p>
+          Aggregate accuracy alone does not reveal how facial recognition systems
+          perform across demographic groups. Subgroup-level false positive and
+          false negative rates can vary substantially despite a single overall
+          accuracy score.
+        </p>
+      
+        <div class="table-wrapper">
+          <table class="research-table">
+            <thead>
+              <tr>
+                <th>Demographic Attribute</th>
+                <th>Metric</th>
+                <th>Minimum</th>
+                <th>Maximum</th>
+              </tr>
+            </thead>
+      
+            <tbody>
+              <tr>
+                <td>Race</td>
+                <td>FPR</td>
+                <td>0.2015</td>
+                <td>0.3518</td>
+              </tr>
+      
+              <tr>
+                <td>Race</td>
+                <td>FNR</td>
+                <td>0.1357</td>
+                <td>0.3117</td>
+              </tr>
+      
+              <tr>
+                <td>Age</td>
+                <td>FPR</td>
+                <td>0.2453</td>
+                <td>0.4601</td>
+              </tr>
+      
+              <tr>
+                <td>Age</td>
+                <td>FNR</td>
+                <td>0.1117</td>
+                <td>0.4958</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+        <p class="visual-caption">
+          Subgroup-level evaluation showing substantial variation in error rates
+          across demographic groups despite a single aggregate accuracy value.
+        </p>
+      </section>
+
+      <div class="research-note">
+        A single aggregate accuracy value can coexist with substantially different
+        subgroup error rates, reinforcing why deployment evaluation must include
+        subgroup-level auditing rather than relying solely on overall performance.
+      </div>
+
+    <h2>Deployment Relevance</h2>
+
+    <p>
+      In law enforcement applications, model errors are not only technical
+      misclassifications. They can influence operational decisions, public trust,
+      accountability, and institutional legitimacy.
+    </p>
+
+    <p>
+      This work supports the broader Ducaltus focus on evaluating whether AI
+      systems are fair, reliable, governable, and suitable for high-stakes
+      deployment.
+    </p>
+
+    <div class="research-actions">
+      <a
+        class="button"
+        href="https://arxiv.org/abs/2603.28675"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View paper on arXiv
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <p class="footer-wordmark">DUCALTUS<span>.</span></p>
+        <p>AI Assurance & Governance</p>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Navigation</p>
+
+        <a href="/#capabilities">Capabilities</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#research">Research</a>
+        <a href="/#insights">Insights</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Contact</p>
+
+        <a href="mailto:hello@ducaltus.com">hello@ducaltus.com</a>
+
+        <a
+          href="https://www.linkedin.com/company/ducaltus/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Legal</p>
+
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Ducaltus. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+</body>
+</html>

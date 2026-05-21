@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reliability & Risk in AI-Assisted Medication Systems | Ducaltus</title>
+
+  <meta
+    name="description"
+    content="Ducaltus research examining reliability, deployment risk, and failure modes in AI-assisted medication decision systems."
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="icon" type="image/png" href="../assets/ducaltus_favicon.png" />
+</head>
+
+<body>
+
+  <header class="nav">
+    <a class="brand wordmark" href="/">
+      DUCALTUS<span>.</span>
+    </a>
+
+    <nav>
+      <a href="/#capabilities">Capabilities</a>
+      <a href="/#approach">Approach</a>
+      <a href="/#research">Research</a>
+      <a href="/#insights">Insights</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="legal-page research-brief">
+
+    <p class="eyebrow">Research Brief</p>
+
+    <h1>Reliability & Risk in AI-Assisted Medication Systems</h1>
+
+    <p>
+      This research explores reliability, operational risk, and failure behaviour
+      in AI-assisted medication decision systems operating in safety-critical environments.
+    </p>
+
+    <h2>Why This Matters</h2>
+
+    <p>
+      In healthcare settings, AI system failures can directly influence clinical
+      decisions, patient outcomes, and treatment pathways. Strong aggregate performance
+      alone does not guarantee reliable real-world deployment.
+    </p>
+
+    <p>
+      Even small error rates can become operationally significant when deployed
+      at scale or within high-impact decision environments.
+    </p>
+
+    <h2>Key Findings</h2>
+
+    <ul>
+      <li>AI reliability must be evaluated beyond overall predictive performance.</li>
+      <li>Decision instability can create hidden operational deployment risks.</li>
+      <li>Error trade-offs may affect patient groups differently under deployment conditions.</li>
+      <li>High-stakes AI systems require structured assurance and oversight mechanisms.</li>
+    </ul>
+
+    <h2>Simulated Failure Scenarios</h2>
+
+<p>
+  The simulated evaluation highlights how different AI medication decision
+  failures can translate into distinct clinical risks.
+</p>
+
+<div class="research-table-wrap">
+  <table class="research-table">
+    <thead>
+      <tr>
+        <th>Case</th>
+        <th>Scenario</th>
+        <th>AI Output</th>
+        <th>Actual Outcome</th>
+        <th>Error Type</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Drug A + Drug B interaction</td>
+        <td>Safe</td>
+        <td>Dangerous</td>
+        <td>False Negative</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Drug C + Drug D combination</td>
+        <td>Dangerous</td>
+        <td>Safe</td>
+        <td>False Positive</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>High dosage Drug E</td>
+        <td>Safe Dose</td>
+        <td>Overdose</td>
+        <td>Wrong Dosage</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>Drug F + Drug G interaction</td>
+        <td>Safe</td>
+        <td>Dangerous</td>
+        <td>False Negative</td>
+      </tr>
+
+      <tr>
+        <td>5</td>
+        <td>Low dosage Drug H</td>
+        <td>High Dose</td>
+        <td>Safe Dose</td>
+        <td>Wrong Dosage</td>
+      </tr>
+
+      <tr>
+        <td>6</td>
+        <td>Drug I + Drug J interaction</td>
+        <td>Dangerous</td>
+        <td>Dangerous</td>
+        <td>Correct</td>
+      </tr>
+
+      <tr>
+        <td>7</td>
+        <td>Standard dosage Drug K</td>
+        <td>Safe Dose</td>
+        <td>Safe Dose</td>
+        <td>Correct</td>
+      </tr>
+
+      <tr>
+        <td>8</td>
+        <td>Drug L + Drug M interaction</td>
+        <td>Safe</td>
+        <td>Dangerous</td>
+        <td>False Negative</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="visual-caption">
+  Simulated AI medication decision outcomes showing false negatives,
+  false positives, wrong dosage cases, and correct classifications.
+</p>
+
+<div class="research-note">
+    False negatives were the most frequent simulated failure type, highlighting
+    the risk of undetected harmful medication interactions in AI-assisted decision systems.
+  </div>
+
+    <h2>Deployment Relevance</h2>
+
+    <p>
+      The research supports broader AI assurance objectives by examining how reliability,
+      decision uncertainty, and deployment context influence the practical safety of AI systems
+      operating in sensitive environments.
+    </p>
+
+    <div class="research-actions">
+      <a
+        class="button"
+        href="https://arxiv.org/abs/2604.01449"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+      View paper on arXiv
+      </a>
+      <a class="secondary-link" href="https://github.com/khalidAALS/ai-reliability-medication-study" target="_blank" rel="noopener noreferrer">
+        View code on GitHub
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <p class="footer-wordmark">DUCALTUS<span>.</span></p>
+        <p>AI Assurance & Governance</p>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Navigation</p>
+
+        <a href="/#capabilities">Capabilities</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#research">Research</a>
+        <a href="/#insights">Insights</a>
+        <a href="/#contact">Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Contact</p>
+
+        <a href="mailto:hello@ducaltus.com">hello@ducaltus.com</a>
+
+        <a
+          href="https://www.linkedin.com/company/ducaltus/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <p class="footer-heading">Legal</p>
+
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Ducaltus. All rights reserved.</p>
+    </div>
+
+  </footer>
+
+</body>
+</html>
