@@ -93,7 +93,7 @@ main {
 }
 
 .hero-logo {
-  width: 640px;
+  width: 700px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -181,7 +181,7 @@ h2 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 2rem;
 }
@@ -545,10 +545,6 @@ h2 {
   margin: 0;
 }
 
-.legal-page {
-  min-height: 80vh;
-}
-
 .hero,
 .section {
   scroll-snap-align: start;
@@ -750,10 +746,6 @@ h2 {
   line-height: 1.7;
 }
 
-.research-visual {
-  margin-top: 4rem;
-}
-
 .table-wrapper {
   overflow-x: auto;
   margin-top: 1.5rem;
@@ -798,4 +790,10 @@ h2 {
 
 .visual-caption {
   max-width: 850px;
+}
+
+.disabled-button {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
 }
