@@ -797,3 +797,10 @@ h2 {
   cursor: default;
   pointer-events: none;
 }
+
+.footer-company {
+  margin-top: 1.5rem;
+  color: rgba(255,255,255,0.42);
+  font-size: 0.8rem;
+  line-height: 1.75;
+}
